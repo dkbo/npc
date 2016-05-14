@@ -25,7 +25,7 @@ Dkbo.prototype = {
       pY = pY >= 0 ? pY : 0;
       var NPC = {
             id: id,
-        imgSrc: "http://dkbo.github.io/images/man.png", // NPC Sprites URL
+        imgSrc: "https://dkbo.github.io/images/man.png", // NPC Sprites URL
             pX: pX, // X Pos
             pY: pY, // y pos
             aX: 0, // x Area

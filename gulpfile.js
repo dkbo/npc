@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
-    uglify = require('gulp-uglify'), //JS最簡壓縮用
+    uglify = require('gulp-uglify') //JS最簡壓縮用
 
 
 
