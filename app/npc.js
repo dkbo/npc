@@ -9,22 +9,23 @@ function Dkbo(option) {
     this.canvas = this.element.getContext('2d');
     this.state = option.state || true;
     this.img = new Image();
-    this.NPC = [];
-    for (var i = 0; i < this.NPCNum; i++) {
-        this.NPC.push(this.NPCSet(i));
-    }
+    this.NPC = this.NPCSet();
+
     if(this.state) {
-       window.requestAnimationFrame(this.walk.bind(this));
+       this.start();
     }
 }
 Dkbo.prototype = {
-    NPCSet: function(id) {
+    NPCSet: function(i) {
+      var npc = [];
+      this.NPCNum = i || this.NPCNum;
+      for (var i = 0; i < this.NPCNum; i++) {
       var pX = Math.floor(Math.random() * 10000 % (this.element.width - 32));
       pX = pX >= 0 ? pX : 0;
       var pY = Math.floor(Math.random() * 10000 % (this.element.height - 48));
       pY = pY >= 0 ? pY : 0;
-      var NPC = {
-            id: id,
+      npc[i] = {
+            id: i,
         imgSrc: "https://dkbo.github.io/images/man.png", // NPC Sprites URL
             pX: pX, // X Pos
             pY: pY, // y pos
@@ -51,7 +52,9 @@ Dkbo.prototype = {
             isD: false, // Is Move Down
             isL: false // Is Move Left
       };
-      return NPC;
+    }
+            return npc;
+
     },
     draw: function(i, turn) {
         var n = this.NPC[i];
