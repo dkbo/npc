@@ -1,0 +1,37 @@
+{
+  "name": "npc",
+  "version": "0.0.1",
+  "description": "",
+  "main": "npc.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "jshint": "^2.9.2",
+    "node-sass": "^3.7.0",
+    "susy": "^2.2.12"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "gulp-jade": "^1.1.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.5",
+    "gulp-webserver": "^0.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkbo/npc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkbo/npc/issues"
+  },
+  "homepage": "https://github.com/dkbo/npc#readme"
+}
