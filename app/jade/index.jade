@@ -1,0 +1,19 @@
+include head.jade
+body
+  div
+    canvas(id="one")
+  script(src='npc.js')
+  script.
+    var a = new Dkbo({id: "one", "NPCNum": 10, "width": 800,"height": 400});
+    function toggle(btn){
+      if(a.state) {
+        a.stop();
+        btn.innerHTML = '啟動';
+      } else {
+        a.start();
+        btn.innerHTML = '暫停';
+      }
+    };
+    function setNum(value){
+      a.NPC = a.NPCSet(value);
+    };
